@@ -3,11 +3,11 @@
 
 ✅ Make case-insensitive
 
-⏹ Add coresponding color to input green, yellow, grey
+✅ Add coresponding color to input green, yellow, grey / CSS Override
 
-⏹ Auto-grow results
+⏹ Auto-grow results textarea
 
-⏹ Auto-grow error
+⏹ Auto-grow error textarea
 
 
 

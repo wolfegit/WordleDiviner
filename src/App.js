@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
 import {GrepDictionaryFile} from "./GrepDictionary";
+var TextareaAutosize = require('react-textarea-autosize').default;
 
 function App() {
   // React binding syntax, callback method technique
@@ -54,11 +55,11 @@ function App() {
             </tr>
             <tr>
               <td> <label htmlFor="Error">Error:</label></td>
-              <td> <textarea id="Error" value={errors} type="text" readOnly></textarea> </td>
+              <td> <TextareaAutosize id="Error"  minRows={4} maxRows={10} value={errors} readOnly/> </td>
             </tr>
             <tr>
-              <td> <label htmlFor="Results">Results Found:</label> </td>
-              <td> <textarea id="Results" type="text" value={grepResults} readOnly /> </td> 
+              <td> <label htmlFor="GrepResults">Results Found:</label> </td>
+              <td> <TextareaAutosize id="GrepResults"  minRows={4} maxRows={100}  value={grepResults} readonly/> </td> 
             </tr>
             
           </tbody>

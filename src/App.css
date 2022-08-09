@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   font-size: calc(8 px + 2vmin);
   color: white;
 }
@@ -46,11 +46,11 @@ textarea {
   height: 100px;
   border: none;
   background-color: transparent;
-  /*resize: none;*/
+  /*resize: auto;*/
   outline: none;
   
-  min-height: 50px;
-  max-height: 100px;
+  /*min-height: 50px; */
+  /*max-height: 100px; */
 }
 input {
   border:0;

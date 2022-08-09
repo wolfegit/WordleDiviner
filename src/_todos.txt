@@ -1,12 +1,13 @@
+
+✅  Add to GitHub
+
 ✅ Make case-insensitive
 
 ⏹ Add coresponding color to input green, yellow, grey
 
-⏹ Auto grow results
+⏹ Auto-grow results
 
-⏹ Auto grow error
-
-⏹ Add to GitHub
+⏹ Auto-grow error
 
 
 

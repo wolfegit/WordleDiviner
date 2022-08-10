@@ -24,15 +24,15 @@ Steps:
    3. Letters cannot appear in bothe Yellow and Grey
    4. Green and Yellow cannot have conflicting letter positions
 
+`
       Example:
 
-      `Green = PL..E `
+      Green  = P...E 
+      Yellow = C...D
+`
+5. As you type-in letters for each color, the results changes dynamically
 
-      `━━━━━━━━╋╋━━╋ `
-      
-      `Yellow= CA..D `
-5. As you type-in letters for each color, the result changes dynamically
-6. Plurals and 3rd person conjugation. The Wordle game filters these out when generating a random word, so avoid them when guessing from the Results list:
+6. Plurals and 3rd person verb conjugation. The Wordle game filters these out when generating a random word, so avoid them when guessing from the Results list:
 
    
    1. Avoid guessing plural words (e.g. FACES)
@@ -40,7 +40,7 @@ Steps:
 
 ## How it Works
 
-Wordld Diviner is written in HTML, React  and Javascript.  A dictionary file is loaded at runtime.  As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.
+Wordld Diviner is written in HTML, React  and Javascript.  A dictionary file is loaded at runtime.  As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Linux GREP utility.
 
 ## Available Scripts
 

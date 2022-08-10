@@ -3,7 +3,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
 import {GrepDictionaryFile} from "./GrepDictionary";
-var TextareaAutosize = require('react-textarea-autosize').default;
+//npm install react-textarea-autosize
+var TextareaAutosize = require('react-textarea-autosize').default; 
 
 function App() {
   // React binding syntax, callback method technique
@@ -11,10 +12,10 @@ function App() {
   //     🔽             🔽                                🔽 
   const [greenLetters,  SetGreenLetters]      = useState(".....");
   const [yellowLetters, SetYellowLetters]     = useState(".....");
-  const [greyLetters,   SetGreyLetters]       = useState(".....");
+  const [greyLetters,   SetGreyLetters]       = useState("");
   const [errors,        SetErrors]            = useState("");
   const [grepResults,   SetGrepResults]       = useState("");
-  const [lastKey, SetLastKey] = useState(() => "");
+  const [lastKey,       SetLastKey]           = useState(() => "");
 
   const KeyHandler = (event) => {
       SetLastKey(event.key);
@@ -55,7 +56,7 @@ function App() {
             </tr>
             <tr>
               <td> <label htmlFor="Error">Error:</label></td>
-              <td> <TextareaAutosize id="Error"  minRows={4} maxRows={10} value={errors} readOnly/> </td>
+              <td> <TextareaAutosize id="Error"  className="inputsmallerfont" minRows={4} maxRows={10} value={errors} readOnly/> </td>
             </tr>
             <tr>
               <td> <label htmlFor="GrepResults">Results Found:</label> </td>

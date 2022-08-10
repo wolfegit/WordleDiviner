@@ -43,10 +43,11 @@ table, th, tr, td {
 textarea {
   font-size: calc(8px + 2vmin);
   color: white;
-  height: 100px;
+  height: 100%;
+  width: 100%;
   border: none;
   background-color: transparent;
-  /*resize: auto;*/
+  resize: auto;
   outline: none;
   
   /*min-height: 50px; */
@@ -61,7 +62,16 @@ input {
   outline: none;
   resize: auto;
 }
-  
+
+.inputsmallerfont {
+  border:0;
+  font-size: calc(4px + 2vmin);
+  color: white;
+  /*border: none;*/
+  background-color: transparent;
+  outline: none;
+  resize: auto;
+}
 
 @keyframes App-logo-spin {
   from {

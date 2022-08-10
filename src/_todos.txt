@@ -1,18 +1,18 @@
 
 ✅  Add to GitHub
-
 ✅ Make case-insensitive
-
 ✅ Add coresponding color to input green, yellow, grey / CSS Override
-
-⏹ Auto-grow results textarea
-
-⏹ Auto-grow error textarea
+✅ Auto-grow results textarea
+✅ Auto-grow error textarea
+    ✅ npm install react-textarea-autosize
+✅ Improve aesthetics
+✅ updated README.md with basic descriptions and instructions
 
 
 
 ⏹
 ✅
 ⛔
-⏳⏰
+⏳
+⏰
 📋

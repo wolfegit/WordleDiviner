@@ -6,9 +6,6 @@
  */
 
 function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
-    //console.log("DEBUG green", greenParam);
-    //console.log("DEBUG yellow", yellowParam);
-    //console.log("DEBUG grey", greyParam);
     
     return new Promise(function(resolve, reject) {
         
@@ -16,6 +13,7 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
         if (yellowParam.length === 0) yellowParam = ".....";
 
         var i, j;   // iterators
+
         // Validation
         if (greenParam.length !== 5)  reject("Error: green parameter must be empty or 5 characters, padded with .");
         if (yellowParam.length !== 5) reject("Error: yellow parameter must be empty or 5 characters, padded with .");
@@ -111,8 +109,6 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
         filter += "" + position5RegExValue; // . or a or [^xyz]
         filter += "$"; // end
 
-        //console.log("RegEx filter:", filter);
-
         const fileReadPromise = ReadDictionaryFile(
             filter,             // RegEx
             position1Yellow,    // Possible match anywhere
@@ -138,10 +134,7 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
 function ReadDictionaryFile(regEx, pos1Match, pos2Match, pos3Match, pos4Match, pos5Match) {
     return new Promise(function(resolve, reject) {
         
-        var grepResults = "";
-        //console.log("RegEx:", regEx);
-        //console.log("Yellows:", pos1Match, pos2Match, pos3Match, pos4Match, pos5Match);
-        
+        var grepResults = "";        
 
         if (regEx.length === 0) reject("RegEx cannot be zero-length");
         if (    pos1Match.length === 0
@@ -157,11 +150,8 @@ function ReadDictionaryFile(regEx, pos1Match, pos2Match, pos3Match, pos4Match, p
             //fs.readFile("./dictionary.txt", "utf8", (err, data) => {
             var filter = regEx; 
 
-            //console.log("RegEx filter:", filter);
+            if (result.count === 0) resolve("No matches"); //exits here
 
-            //var re = new RegExp(filter, "gm");  // global, multiline
-            //var result = data.matchAll(re);
-            
             for (const item of result) {
                 // Also match any 5 yellows in the dictionary word
                 if (RegExp(filter, "gm").test(item)
@@ -181,5 +171,4 @@ function ReadDictionaryFile(regEx, pos1Match, pos2Match, pos3Match, pos4Match, p
     }) // promise
 } // function GrepDictionaryFile
 
-//export default GrepDictionaryFile;
 module.exports.GrepDictionaryFile = GrepDictionaryFile; 

@@ -11,35 +11,48 @@ Steps:
 1.  Run the application side-by-side with Wordle
 2.  To start, guess any random 5-letter word in Wordle/
 3.  Add letters to Wordl Divine based on their color
-    a. Green and Yellow must be 5 characters.  Use the period (.) as a widlcard spacer
-    b. Grey letters has no limit
+    
+    - Green and Yellow input must be 5 characters.  Use the period (.) to pad as widlcards. Example:
+
+        `TR..K`
+
+    - Grey letter input has no limit
+
 4.  Validation
 
-    The same letter cannot appear in both Green and Yellow
+    - The same letter cannot appear in both Green and Yellow
 
-    The same letter cannot appear in both Green and Grey
+    - The same letter cannot appear in both Green and Grey
 
-    The same letter cannot appear in both Yellow and Grey
+    - The same letter cannot appear in both Yellow and Grey
 
-    Green and Yellow cannot have conflicting letter positions. Example:
+    - Green and Yellow cannot have conflicting letter positions. Example:
 
->```
->Green  P....
->
->Yellow C....
->```
+
+        `_Green P....`
+
+        `Yellow C....`
+
 
 5. As you type-in letters for each color, the results changes dynamically. 
 
-6.  Plurals and 3rd person verb conjugation. The Wordle game filters these out when generating a random word, so avoid them when guessing from the Results list.  Tips:
+6.  Words ending in "s" - plurals and 3rd person verb conjugation.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
 
-    Avoid guessing plural words (e.g. FACES)
+    - Avoid guessing plural words (e.g. FACES)
 
-    Avoid guessing 3rd person verbs (e.g. WALKS)
+    - Avoid guessing 3rd person verbs (e.g. WALKS)
+
+    - For details, see this Wordle clone and its source dictionary:
+
+https://github.com/lynn/hello-wordl
+
+https://norvig.com/mayzner.html
 
 ## How it Works
 
-Wordld Diviner is written in HTML, React  and Javascript.  A dictionary file is loaded at runtime.  As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Linux GREP utility.
+Wordld Diviner is written in HTML, React and Javascript.  A dictionary file is loaded at runtime.  
+
+As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.
 
 
 # Boilderpate Mardown Text

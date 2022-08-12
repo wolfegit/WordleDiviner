@@ -2,46 +2,47 @@
 
 This browser-based utility helps you divine the answer to Wordle and its many copycats.
 
-![](WordleDivinerScreenshot.jpg)
+ ![Screenshot](WordleDivinerScreenshot.jpg)
 
 
 ## How to Use
 
 Steps:
+1.  Run the application side-by-side with Wordle
+2.  To start, guess any random 5-letter word in Wordle/
+3.  Add letters to Wordl Divine based on their color
+    a. Green and Yellow must be 5 characters.  Use the period (.) as a widlcard spacer
+    b. Grey letters has no limit
+4.  Validation
 
-1. Run the application side-by-side with Wordle
-2. To start, guess any random 5-letter word in Wordle/
-3. Add letters to Wordl Divine based on their color
+    The same letter cannot appear in both Green and Yellow
 
-   
-   1. Green and Yellow must be 5 characters.  Use the period (.) as a widlcard spacer
-   2. Grey letters has no limit
-4. Validation
+    The same letter cannot appear in both Green and Grey
 
-   
-   1. Letters cannot appear in both Green and Yellow
-   2. Letters cannot appear in both Green and Grey
-   3. Letters cannot appear in bothe Yellow and Grey
-   4. Green and Yellow cannot have conflicting letter positions
+    The same letter cannot appear in both Yellow and Grey
 
-`
-      Example:
+    Green and Yellow cannot have conflicting letter positions. Example:
 
-      Green  = P...E 
-      Yellow = C...D
-`
-5. As you type-in letters for each color, the results changes dynamically
+>```
+>Green  P....
+>
+>Yellow C....
+>```
 
-6. Plurals and 3rd person verb conjugation. The Wordle game filters these out when generating a random word, so avoid them when guessing from the Results list:
+5. As you type-in letters for each color, the results changes dynamically. 
 
-   
-   1. Avoid guessing plural words (e.g. FACES)
-   2. Avoid guessing 3rd person verbs (e.g. WALKS)
+6.  Plurals and 3rd person verb conjugation. The Wordle game filters these out when generating a random word, so avoid them when guessing from the Results list.  Tips:
+
+    Avoid guessing plural words (e.g. FACES)
+
+    Avoid guessing 3rd person verbs (e.g. WALKS)
 
 ## How it Works
 
 Wordld Diviner is written in HTML, React  and Javascript.  A dictionary file is loaded at runtime.  As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Linux GREP utility.
 
+
+# Boilderpate Mardown Text
 ## Available Scripts
 
 In the project directory, you can run:

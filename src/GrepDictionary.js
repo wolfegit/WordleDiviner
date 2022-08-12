@@ -9,17 +9,18 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
     
     return new Promise(function(resolve, reject) {
         
-        if (greenParam.length === 0) greenParam = ".....";
+        // replace empty string as needed
+        if (greenParam.length === 0)   greenParam = "....."; 
         if (yellowParam.length === 0) yellowParam = ".....";
 
         var i, j;   // iterators
 
-        // Validation
+        // Validation length
         if (greenParam.length !== 5)  reject("Error: green parameter must be empty or 5 characters, padded with .");
         if (yellowParam.length !== 5) reject("Error: yellow parameter must be empty or 5 characters, padded with .");
         //  greyParam.length can be 0 or more
 
-        // validation green & yellow conflicts
+        // Validation green & yellow conflicts
         for (i = 0; i < greenParam.length ; i++) {
             for (j = 0; j < yellowParam.length; j++) {
                 if (greenParam.substr(i, 1) !== "." && greenParam.substr(i, 1) === yellowParam.substr(j, 1)) {
@@ -27,7 +28,7 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
                 }
             }
         }
-        // validation green & grey conflicts
+        // Validation green & grey conflicts
         for (i = 0; i < greenParam.length ; i++) {
             for (j = 0; j < greyParam.length; j++) {
                 if (greenParam.substr(i, 1) !== "." && greenParam.substr(i, 1) === greyParam.substr(j, 1)) {
@@ -35,7 +36,7 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
                 }
             }
         }
-        // validation yellow & grey conflicts
+        // Validation yellow & grey conflicts
         for (i = 0; i < yellowParam.length ; i++) {
             for (j = 0; j < greyParam.length; j++) {
                 if (yellowParam.substr(i, 1) !== "." && yellowParam.substr(i, 1) === greyParam.substr(j, 1)) {
@@ -43,22 +44,22 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
                 }
             }
         }
-        // validation green & yellow conflicts
+        // Validation green & yellow conflicts
         for (i = 0; i < greenParam.length ; i++) {
             if (greenParam.substr(i, 1) !== "." && yellowParam.substr(i, 1) !== "." ) {
                 reject("Error: green and yellow have conflicting values in position: " + (i+1));
             }
         }
 
-        // Color Position Values
-        // . | 1 letter
+        // Create Position Values
+        // . or 1 letter
         var position1Green = greenParam.substr(0, 1); 
         var position2Green = greenParam.substr(1, 1); 
         var position3Green = greenParam.substr(2, 1); 
         var position4Green = greenParam.substr(3, 1); 
         var position5Green = greenParam.substr(4, 1); 
 
-        // . | 1 letter
+        // . or 1 letter
         var position1Yellow = yellowParam.substr(0, 1); 
         var position2Yellow = yellowParam.substr(1, 1); 
         var position3Yellow = yellowParam.substr(2, 1); 
@@ -102,20 +103,20 @@ function GrepDictionaryFile (greenParam, yellowParam, greyParam) {
         // Main RegEx filter
         var filter = ""; 
         filter += "^"; // start
-        filter += "" + position1RegExValue; // . or a or [^xyz]
-        filter += "" + position2RegExValue; // . or a or [^xyz]
-        filter += "" + position3RegExValue; // . or a or [^xyz]
-        filter += "" + position4RegExValue; // . or a or [^xyz]
-        filter += "" + position5RegExValue; // . or a or [^xyz]
+        filter += "" + position1RegExValue; // . or single letter or negate [^xyz]
+        filter += "" + position2RegExValue; // . or single letter or negate [^xyz]
+        filter += "" + position3RegExValue; // . or single letter or negate [^xyz]
+        filter += "" + position4RegExValue; // . or single letter or negate [^xyz]
+        filter += "" + position5RegExValue; // . or single letter or negate [^xyz]
         filter += "$"; // end
 
         const fileReadPromise = ReadDictionaryFile(
             filter,             // RegEx
-            position1Yellow,    // Possible match anywhere
-            position2Yellow,    // Possible match anywhere
-            position3Yellow,    // Possible match anywhere
-            position4Yellow,    // Possible match anywhere
-            position5Yellow);   // Possible match anywhere
+            position1Yellow,    // Possible letter match anywhere
+            position2Yellow,    // Possible letter match anywhere
+            position3Yellow,    // Possible letter match anywhere
+            position4Yellow,    // Possible letter match anywhere
+            position5Yellow);   // Possible letter match anywhere
         fileReadPromise
             .then((message) => {
                 resolve(message);
@@ -142,31 +143,28 @@ function ReadDictionaryFile(regEx, pos1Match, pos2Match, pos3Match, pos4Match, p
             ||  pos3Match.length === 0
             ||  pos4Match.length === 0
             ||  pos5Match.length === 0) 
-            reject("All 5 yellow values must not be zero-length");
+            reject("Error: Regular Expression and all 5 yellow values cannot be zero-length");
 
-            // Read & loop thtu dictionary file
-            const result = require("./dictionary.json");
+            // Read entire dictionary file into memory
+            const dictionary = require("./dictionary.json");
 
-            //fs.readFile("./dictionary.txt", "utf8", (err, data) => {
+            if (dictionary.count === 0) resolve("No matches"); //exits here
+
             var filter = regEx; 
 
-            if (result.count === 0) resolve("No matches"); //exits here
-
-            for (const item of result) {
-                // Also match any 5 yellows in the dictionary word
-                if (RegExp(filter, "gm").test(item)
-                    && RegExp(pos1Match, "gm").test(item)
-                    && RegExp(pos2Match, "gm").test(item)
-                    && RegExp(pos3Match, "gm").test(item)
-                    && RegExp(pos4Match, "gm").test(item)
-                    && RegExp(pos5Match, "gm").test(item)
+            for (const word of dictionary) {
+                // Test RegEx filter and possible yellows.  "gm" = global, multiline
+                if (   RegExp(filter, "gm").test(word)      // test RegEx
+                    && RegExp(pos1Match, "gm").test(word)   // test for yellow 1 in any position
+                    && RegExp(pos2Match, "gm").test(word)   // test for yellow 2 in any position
+                    && RegExp(pos3Match, "gm").test(word)   // test for yellow 3 in any position
+                    && RegExp(pos4Match, "gm").test(word)   // test for yellow 4 in any position
+                    && RegExp(pos5Match, "gm").test(word)   // test for yellow 5 in any position
                 ) {
-                    grepResults += item + "\n"; // append CR
+                    grepResults += word + "\n"; // append CR
                 }                       
             } // for/of
-                resolve(grepResults);
-    
-            //}); // fs.readfile
+            resolve(grepResults);       // all matching words returned
         
     }) // promise
 } // function GrepDictionaryFile

@@ -169,4 +169,4 @@ function ReadDictionaryFile(regEx, pos1Match, pos2Match, pos3Match, pos4Match, p
     }) // promise
 } // function GrepDictionaryFile
 
-module.exports.GrepDictionaryFile = GrepDictionaryFile; 
+export {GrepDictionaryFile}

@@ -44,15 +44,15 @@ function App() {
           <tbody>
             <tr>
               <td className="green"> <label className="green" htmlFor="greenInput">Green Letters:</label> </td>
-              <td>  <input id="GreenInput" value={greenLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetGreenLetters(e.target.value)} type="text" maxLength="5" /> </td>
+              <td>  <input className="green" id="GreenInput" value={greenLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetGreenLetters(e.target.value)} type="text" maxLength="5" /> </td>
             </tr>
             <tr>
               <td className="yellow"> <label className="yellow" htmlFor="YellowInput">Yellow Letters:</label></td>
-              <td> <input id="YellowInput" value={yellowLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetYellowLetters(e.target.value)} type="text" maxLength="5" /> </td>
+              <td> <input className="yellow" id="YellowInput" value={yellowLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetYellowLetters(e.target.value)} type="text" maxLength="5" /> </td>
             </tr>
             <tr>
               <td className="grey"> <label className="grey" htmlFor="GreyInput">Grey Letters:</label></td>
-              <td> <input id="GreyInput" value={greyLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetGreyLetters(e.target.value)} type="text" /> </td>
+              <td> <input className="grey" id="GreyInput" value={greyLetters} onKeyUp={(e) => KeyHandler(e)} onChange={(e) => SetGreyLetters(e.target.value)} type="text" /> </td>
             </tr>
             <tr>
               <td> <label htmlFor="Error">Error:</label></td>

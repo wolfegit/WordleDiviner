@@ -55,6 +55,7 @@ textarea {
 }
 input {
   border:0;
+  border-radius: 10px;
   font-size: calc(8px + 2vmin);
   color: white;
   /*border: none;*/

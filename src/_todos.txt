@@ -1,5 +1,5 @@
 
-✅  Add to GitHub
+✅ Add to GitHub
 ✅ Make case-insensitive
 ✅ Add coresponding color to input green, yellow, grey / CSS Override
 ✅ Auto-grow results textarea
@@ -7,9 +7,16 @@
     ✅ npm install react-textarea-autosize
 ✅ Improve aesthetics
 ✅ updated README.md with basic descriptions and instructions
+🔲 Ignore non-alpha characters, if typed: 0-9, space, !@# etc.
 
+Bugs:
+🔲 If a word has a legitimate double letter, validation needs to allow
+ the second letter in yellow or grey:
+    Solution:   APPLE
+    Green:      AP...
+    Yellow:     ...PE   ---⊳ Error: green and yellow both contain: P
 
-
+🔲
 ⏹
 ✅
 ⛔

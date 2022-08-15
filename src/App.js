@@ -60,7 +60,7 @@ function App() {
             </tr>
             <tr>
               <td> <label htmlFor="GrepResults">Results Found:</label> </td>
-              <td> <TextareaAutosize id="GrepResults"  minRows={4} maxRows={100}  value={grepResults} readonly/> </td> 
+              <td> <TextareaAutosize id="GrepResults"  minRows={4} maxRows={100}  value={grepResults} readOnly/> </td> 
             </tr>
             
           </tbody>

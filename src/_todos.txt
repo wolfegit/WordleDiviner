@@ -7,14 +7,14 @@
     ✅ npm install react-textarea-autosize
 ✅ Improve aesthetics
 ✅ updated README.md with basic descriptions and instructions
-🔲 Ignore non-alpha characters, if typed: 0-9, space, !@# etc.
+🔲 Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
 
 Bugs:
 🔲 If a word has a legitimate double letter, validation needs to allow
  the second letter in yellow or grey:
     Solution:   APPLE
     Green:      AP...
-    Yellow:     ...PE   ---⊳ Error: green and yellow both contain: P
+    Yellow:     ...EP   ---⊳ Error: green and yellow both contain: P
 
 🔲
 ⏹

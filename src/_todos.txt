@@ -8,7 +8,10 @@
 ✅ Improve aesthetics
 ✅ updated README.md with basic descriptions and instructions
 🔲 Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
-
+🔲 Instead of 5-letter fields for Green and Yellow, have individual 
+    1-letter fields so the user doesn't need to fuss with ..... padding.
+    🟩🟩🟩🟩🟩 
+    🟨🟨🟨🟨🟨
 Bugs:
 🔲 If a word has a legitimate double letter, validation needs to allow
  the second letter in yellow or grey:

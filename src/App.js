@@ -56,7 +56,7 @@ function App() {
             </tr>
             <tr>
               <td> <label htmlFor="Error">Error:</label></td>
-              <td> <TextareaAutosize id="Error"  className="inputsmallerfont" minRows={4} maxRows={10} value={errors} readOnly/> </td>
+              <td> <TextareaAutosize id="Error"  className="inputsmallerfont" minRows={2} maxRows={10} value={errors} readOnly/> </td>
             </tr>
             <tr>
               <td> <label htmlFor="GrepResults">Results Found:</label> </td>

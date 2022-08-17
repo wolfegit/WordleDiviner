@@ -36,23 +36,32 @@ Steps:
 
 5. As you type-in letters for each color, the results changes dynamically. 
 
-6.  Words ending in "s" - plurals and 3rd person verb conjugation.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
+6.  Words ending in "S" - plurals and 3rd person verb conjugations.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
 
     - Avoid guessing plural words (e.g. FACES)
 
     - Avoid guessing 3rd person verbs (e.g. WALKS)
 
-    - For details, see this Wordle clone and its source dictionary:
+    - For details, see code from this Wordle clone and its source dictionary:
 
-https://github.com/lynn/hello-wordl
+        https://github.com/lynn/hello-wordl
 
-https://norvig.com/mayzner.html
+        https://norvig.com/mayzner.html
+
+7.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
+
+
 
 ## How it Works
 
-Wordld Diviner is written in HTML, React and Javascript.  A dictionary file is loaded at runtime.  
+Wordld Diviner is written in HTML, Javascript and React. 
 
-As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.
+The entire dictionary file is loaded at runtime; this may make the page initially slow to load, but dictionary lookups are lightning fast with no network traffic.
+
+As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
+
+
+
 
 
 # Boilderpate Mardown Text

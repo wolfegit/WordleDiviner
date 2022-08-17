@@ -1,23 +1,41 @@
 
-✅ Add to GitHub
-✅ Make case-insensitive
-✅ Add coresponding color to input green, yellow, grey / CSS Override
-✅ Auto-grow results textarea
-✅ Auto-grow error textarea
+✅  Add to GitHub
+✅  Make case-insensitive
+✅  Add coresponding color to input green, yellow, grey / CSS
+✅  Auto-grow Eesults textarea
+✅  Auto-grow Error textarea
     ✅ npm install react-textarea-autosize
-✅ Improve aesthetics
-✅ updated README.md with basic descriptions and instructions
-🔲 Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
-🔲 Instead of 5-letter fields for Green and Yellow, have individual 
+✅  Improve aesthetics
+✅  updated README.md with basic descriptions and instructions
+
+🔲  TODO Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
+
+🔲  TODO Instead of 5-letter fields for Green and Yellow, have individual 
     1-letter fields so the user doesn't need to fuss with ..... padding.
-    🟩🟩🟩🟩🟩 
-    🟨🟨🟨🟨🟨
+    🟩 🟩 🟩 🟩 🟩 
+    🟨 🟨 🟨 🟨 🟨
+
+🔲  TODO Allow for multiple wrong letters in yellow 
+    See bug below regarding legitimate double-letters  
+    🟨 🟨 🟨 🟨 🟨
+    🟨 🟨 🟨 🟨 🟨
+    🟨 🟨 🟨 🟨 🟨??
+
+🔲  TODO Expand to allow for range of 4 to 11 letter words
+    
 Bugs:
-🔲 If a word has a legitimate double letter, validation needs to allow
- the second letter in yellow or grey:
+🔲  TODO If a word has a legitimate double-letter, validation needs
+ to allow the second letter in yellow or grey:
     Solution:   APPLE
     Green:      AP...
-    Yellow:     ...EP   ---⊳ Error: green and yellow both contain: P
+    Yellow:     ...AP --⊳⊳ Error: green and yellow both contain: P
+
+🔲  TODO Realign the results column so "Results" label is always 
+    visible (long results list pushes it too far down)
+
+🔲  Replace TextArea with label or "content editable div"?
+    🔲  Still need react-textarea-autosize NPM package?
+
 
 🔲
 ⏹

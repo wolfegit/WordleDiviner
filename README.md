@@ -9,7 +9,7 @@ This browser-based utility helps you divine the answer to Wordle and its many co
 
 Steps:
 1.  Run the application side-by-side with Wordle
-2.  To start, guess any random 5-letter word in Wordle/
+2.  To start, guess any random 5-letter word in Wordle
 3.  Add letters to Wordl Divine based on their color
     
     - Green and Yellow input must be 5 characters.  Use the period (.) to pad as widlcards. Example:

@@ -48,7 +48,7 @@ Steps:
 
         https://norvig.com/mayzner.html
 
-6. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose:
+7. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose:
 
     issue sieve vises
     jives sixes wises
@@ -57,7 +57,7 @@ Steps:
 
 ***issue*** is the correct answer, the most common, obvious word.
 
-7.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
+8.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
 
 
 

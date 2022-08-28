@@ -50,10 +50,10 @@ Steps:
 
 7. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose:
 
-    issue sieve vises
+    `issue sieve vises
     jives sixes wises
     juvie sizes wives
-    ozzie views zowie ?
+    ozzie views zowie` ?
 
 ***issue*** is the correct answer, the most common, obvious word.
 

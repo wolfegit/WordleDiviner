@@ -28,10 +28,10 @@ Steps:
 
     - Green and Yellow cannot have conflicting letter positions. Example:
 
+        <code><span style="color:green" > P....</span></code>
 
-        `_Green P....`
+        <code><span style="color:yellow" > C....</span></code>
 
-        `Yellow C....`
 
 
 5. As you type-in letters for each color, the results changes dynamically. 
@@ -60,14 +60,19 @@ Steps:
 8.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
 
 
-
 ## How it Works
 
 Wordld Diviner is written in HTML, Javascript and React. 
 
 The entire dictionary file is loaded at runtime; this may make the page initially slow to load, but dictionary lookups are lightning fast with no network traffic.
 
-As the user types the application uses Green, Yellow and Grey letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
+As the user types the application uses 
+<code><span style="color:green" > GREEN</span></code>
+,
+<code><span style="color:yellow" > YELLOW </span></code>
+and
+<code><span style="color:grey" > GREY</span></code>
+letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
 
 
 

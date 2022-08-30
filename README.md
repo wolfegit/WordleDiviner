@@ -48,23 +48,12 @@ Steps:
 
         https://norvig.com/mayzner.html
 
-7. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose:
+7. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose?
 
-    `issue
-    jives
-    juvie
-    ozzie
-    sieve
-    sixes
-    sizes
-    views
-    vises
-    wises
-    wives
-    zowie
-    ` ?
+    There are several good words: of the best are `spice`, `spike`, `spite` and `swipe`.  ***`spice`*** is the correct answer, the most common, obvious word.
 
-***`issue`*** is the correct answer, the most common, obvious word.
+ ![Screenshot](WordleDivinerBestWords.jpg)
+
 
 8.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
 

@@ -20,17 +20,26 @@ Steps:
 
 4.  Validation
 
-    - The same letter cannot appear in both Green and Yellow
+    - The same letter cannot appear in both <code><span style="color:green">GREEN</span></code>
+and
+<code><span style="color:yellow">YELLOW </span></code>
 
-    - The same letter cannot appear in both Green and Grey
+    - The same letter cannot appear in both <code><span style="color:green">GREEN</span></code>
+and 
+<code><span style="color:grey">GREY</span></code>
 
-    - The same letter cannot appear in both Yellow and Grey
+    - The same letter cannot appear in both 
+<code><span style="color:yellow">YELLOW </span></code>
+and
+<code><span style="color:grey">GREY</span></code>
 
-    - Green and Yellow cannot have conflicting letter positions. Example:
+    - <code><span style="color:green">GREEN</span></code>
+and
+<code><span style="color:yellow">YELLOW </span></code> cannot have conflicting letter positions. Example:
 
-        <code><span style="color:green" > P....</span></code>
+        <code><span style="color:green"> P....</span></code>
 
-        <code><span style="color:yellow" > C....</span></code>
+        <code><span style="color:yellow"> C....</span></code>
 
 
 

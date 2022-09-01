@@ -8,7 +8,9 @@
 ✅  Improve aesthetics
 ✅  updated README.md with basic descriptions and instructions
 
-🔲  TODO Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
+🔲  TODO    Ignore non-alpha characters, if typed: 0-9, space, symbols !@# etc.
+
+🔲  TODO    Expand to allow for range of 4 to 11 letter words
 
 ⛔  SKIP Instead of 5-letter fields for Green and Yellow, have individual 
     1-letter fields so the user doesn't need to fuss with ..... padding.
@@ -22,16 +24,16 @@
     🟨 🟨 🟨 🟨 🟨??
 
 🔲  TODO    Create a Wordle-like grid for letter entry, where the user types the letter,
-            then double-clicks or (CTRL-G, CTRL-Y) for Green, Yellow, etc.
-            🔲🟨🔲🔲🔲
-            🔲🟩🔲🟨🔲
-            🔲🟩🟩🔲🔲
+            then double-clicks or (CTRL-G, CTRL-Y) for Green, Yellow, Grey, etc.
+            ⬛🟨⬛⬛⬛
+            ⬛🟩⬛🟨⬛
+            ⬛🟩🟩⬛⬛
             🔲🔲🔲🔲🔲
             🔲🔲🔲🔲🔲
             🔲🔲🔲🔲🔲            
             See bug below regarding legitimate double-letters.
 
-🔲  TODO    Expand to allow for range of 4 to 11 letter words
+
     
 Bugs:
 🔲  TODO    If a word has a legitimate double-letter, validation needs
@@ -48,6 +50,9 @@ Bugs:
 
 
 🔲
+🟩
+🟨
+⬛
 ⏹
 ✅
 ⛔

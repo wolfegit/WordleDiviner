@@ -23,6 +23,12 @@
 
 🔲  TODO    Create a Wordle-like grid for letter entry, where the user types the letter,
             then double-clicks or (CTRL-G, CTRL-Y) for Green, Yellow, etc.
+            🔲🟨🔲🔲🔲
+            🔲🟩🔲🟨🔲
+            🔲🟩🟩🔲🔲
+            🔲🔲🔲🔲🔲
+            🔲🔲🔲🔲🔲
+            🔲🔲🔲🔲🔲            
             See bug below regarding legitimate double-letters.
 
 🔲  TODO    Expand to allow for range of 4 to 11 letter words

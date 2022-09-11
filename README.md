@@ -63,6 +63,7 @@ and
 
  ![Screenshot](WordleDivinerBestWords.jpg)
 
+    Also, avoid curse-words. Wordle (and others) heuristics to filter out these words. 
 
 8.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
 

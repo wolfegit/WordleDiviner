@@ -82,9 +82,13 @@ and
 <code><span style="color:grey" > GREY</span></code>
 letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
 
-
-
-
+You may decide to swap out the dictionary file for a simpler word list or some other custom dictionary.  <code>dictionary.json</code> is (of course) in JSON format.  There are many online utilities to convert <code>txt</code> files to <code>json</code>.  Sample:
+<code>
+[ ...
+  "abandoned",  "abandoner", "abandoners", "abandoning",
+  "abandonment", ...
+]
+</code>
 
 # Boilderpate Mardown Text
 ## Available Scripts

@@ -12,16 +12,16 @@
 
 🔲  TODO    Expand to allow for range of 4 to 11 letter words
 
-⛔  SKIP Instead of 5-letter fields for Green and Yellow, have individual 
+⛔  WONTFIX Instead of 5-letter fields for Green and Yellow, have individual 
     1-letter fields so the user doesn't need to fuss with ..... padding.
     🟩 🟩 🟩 🟩 🟩 
     🟨 🟨 🟨 🟨 🟨
 
-⛔  SKIP Allow for multiple wrong letters in yellow 
-    See bug below regarding legitimate double-letters  
+⛔  WONTFIX Allow for multiple wrong letters in yellow 
+    (See bug below regarding legitimate double-letters)  
     🟨 🟨 🟨 🟨 🟨
     🟨 🟨 🟨 🟨 🟨
-    🟨 🟨 🟨 🟨 🟨??
+    🟨 🟨 🟨 🟨 🟨
 
 🔲  TODO    Create a Wordle-like grid for letter entry, where the user types the letter,
             then double-clicks or (CTRL-G, CTRL-Y) for Green, Yellow, Grey, etc.
@@ -31,10 +31,8 @@
             🔲🔲🔲🔲🔲
             🔲🔲🔲🔲🔲
             🔲🔲🔲🔲🔲            
-            See bug below regarding legitimate double-letters.
+            (See bug below regarding legitimate double-letters)
 
-
-    
 Bugs:
 🔲  TODO    If a word has a legitimate double-letter, validation needs
             to allow the second letter in yellow or grey:
@@ -49,13 +47,4 @@ Bugs:
     🔲      Do we still need react-textarea-autosize NPM package?
 
 
-🔲
-🟩
-🟨
-⬛
-⏹
-✅
-⛔
-⏳
-⏰
-📋
+🔲🟨⬛⏹✅⛔⏳⏰📋

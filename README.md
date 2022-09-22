@@ -2,8 +2,14 @@
 
 This browser-based utility helps you divine the answer to Wordle and its many copycats.
 
+GitHub source code:
+
+`git clone https://github.com/wolfegit/WordleDiviner.git`
+
  ![Screenshot](WordleDivinerScreenshot.jpg)
 
+Video clip (40 seconds):
+https://github.com/wolfegit/WordleDiviner/demo.gif
 
 ## How to Use
 
@@ -14,34 +20,32 @@ Steps:
     
     - Green and Yellow input must be 5 characters.  Use the period (.) to pad as widlcards. Example:
 
-        `TR..K`
+        <code><span style="color:lightgreen; background-color:black">TR..K</span></code>
 
     - Grey letter input has no limit
 
 4.  Validation
 
-    - The same letter cannot appear in both <code><span style="color:green">GREEN</span></code>
+    - The same letter cannot appear in both <code><span style="color:lightgreen; background-color:black">GREEN</span></code>
 and
-<code><span style="color:yellow">YELLOW </span></code>
+<code><span style="color:yellow; background-color:black">YELLOW </span></code>
 
-    - The same letter cannot appear in both <code><span style="color:green">GREEN</span></code>
+    - The same letter cannot appear in both <code><span style="color:lightgreen; background-color:black">GREEN</span></code>
 and 
-<code><span style="color:grey">GREY</span></code>
+<code><span style="color:grey; background-color:black">GREY</span></code>
 
     - The same letter cannot appear in both 
-<code><span style="color:yellow">YELLOW </span></code>
+<code><span style="color:yellow; background-color:black">YELLOW </span></code>
 and
-<code><span style="color:grey">GREY</span></code>
+<code><span style="color:grey; background-color:black">GREY</span></code>
 
-    - <code><span style="color:green">GREEN</span></code>
+    - <code><span style="color:lightgreen; background-color:black">GREEN</span></code>
 and
-<code><span style="color:yellow">YELLOW </span></code> cannot have conflicting letter positions. Example:
+<code><span style="color:yellow; background-color:black">YELLOW </span></code> cannot have conflicting letter positions. Example:
 
-        <code><span style="color:green"> P....</span></code>
+        <code><span style="color:lightgreen; background-color:black"> P....</span></code>
 
         <code><span style="color:yellow"> C....</span></code>
-
-
 
 5. As you type-in letters for each color, the results changes dynamically. 
 
@@ -76,11 +80,11 @@ Wordld Diviner is written in HTML, Javascript and React.
 The entire dictionary file is loaded at runtime; this may make the page initially slow to load, but dictionary lookups are lightning fast with no network traffic.
 
 As the user types the application uses 
-<code><span style="color:green" > GREEN</span></code>
+<code><span style="color:lightgreen; background-color:black" > GREEN</span></code>
 ,
-<code><span style="color:yellow" > YELLOW </span></code>
+<code><span style="color:yellow; background-color:black" > YELLOW </span></code>
 and
-<code><span style="color:grey" > GREY</span></code>
+<code><span style="color:grey; background-color:black" > GREY</span></code>
 letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
 
 You may decide to swap out the dictionary file for a simpler word list or some other custom dictionary.  <code>dictionary.json</code> is (of course) in JSON format.  There are many online utilities to convert <code>txt</code> files to <code>json</code>.  Sample:

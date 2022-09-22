@@ -6,10 +6,9 @@ GitHub source code:
 
 `git clone https://github.com/wolfegit/WordleDiviner.git`
 
- ![Screenshot](WordleDivinerScreenshot.jpg)
-
 Video clip (40 seconds):
-https://github.com/wolfegit/WordleDiviner/demo.gif
+![](demo.gif)
+
 
 ## How to Use
 

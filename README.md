@@ -44,7 +44,7 @@ and
 
         <code><span style="color:lightgreen; background-color:black"> P....</span></code>
 
-        <code><span style="color:yellow"> C....</span></code>
+        <code><span style="color:yellow; background-color:black"> C....</span></code>
 
 5. As you type-in letters for each color, the results changes dynamically. 
 

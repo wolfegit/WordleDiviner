@@ -13,9 +13,9 @@ Video clip (40 seconds):
 ## How to Use
 
 Steps:
-1.  Run the application side-by-side with Wordle
-2.  To start, guess any random 5-letter word in Wordle
-3.  Add letters to Wordl Divine based on their color
+1.  Run the application side-by-side with Wordle.
+2.  To start, guess any random 5-letter word in Wordle.
+3.  Add letters to Wordle Diviner based on their color:
     
     - Green and Yellow input must be 5 characters.  Use the period (.) to pad as widlcards. Example:
 
@@ -34,19 +34,19 @@ and
 <code><span style="color:grey; background-color:black">GREY</span></code>
 
     - The same letter cannot appear in both 
-<code><span style="color:yellow; background-color:black">YELLOW </span></code>
+<code><span style="color:yellow; background-color:black">YELLOW</span></code>
 and
 <code><span style="color:grey; background-color:black">GREY</span></code>
 
     - <code><span style="color:lightgreen; background-color:black">GREEN</span></code>
 and
-<code><span style="color:yellow; background-color:black">YELLOW </span></code> cannot have conflicting letter positions. Example:
+<code><span style="color:yellow; background-color:black">YELLOW</span></code> cannot have conflicting letter positions. Example:
 
         <code><span style="color:lightgreen; background-color:black"> P....</span></code>
 
         <code><span style="color:yellow; background-color:black"> C....</span></code>
 
-5. As you type-in letters for each color, the results changes dynamically. 
+5. As you type in letters for each color, the results changes dynamically. 
 
 6.  Words ending in "S" - plurals and 3rd person verb conjugations.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
 
@@ -67,7 +67,7 @@ and
  ![Screenshot](WordleDivinerBestWords.jpg)
 
 
-Also, avoid curse-words. Wordle (and others) use heuristics to filter out these words. 
+Also, avoid vulgar words (i.e. cuss words). Wordle (and others) use heuristics to filter out these words. 
 
 8.  Usually you can solve the puzzle after 3 or 4 hints from Wordle Diviner.
 
@@ -84,13 +84,24 @@ As the user types the application uses
 <code><span style="color:yellow; background-color:black" > YELLOW </span></code>
 and
 <code><span style="color:grey; background-color:black" > GREY</span></code>
-letters in a complex RegEx (regular expression) against a dictionary file.  Based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
+letters in a complex RegEx (regular expression) against a dictionary file, based on Unix/Linux GREP utility.  See the `GrepDictionary.js` file for the core lookup logic.
 
-You may decide to swap out the dictionary file for a simpler word list or some other custom dictionary.  <code>dictionary.json</code> is (of course) in JSON format.  There are many online utilities to convert <code>txt</code> files to <code>json</code>.  Sample:
+You may decide to swap out the dictionary file for a simpler word list or some other custom dictionary.  <code>dictionary.json</code> is (of course) in JSON format.  There are many online utilities to convert <code>txt</code> files to <code>json</code>.  Example JSON format:
+
 <code>
 [ ...
-  "abandoned",  "abandoner", "abandoners", "abandoning",
-  "abandonment", ...
+  
+  "abandoned",  
+  
+  "abandoner", 
+  
+  "abandoners", 
+  
+  "abandoning",
+  
+  "abandonment", 
+
+  ...
 ]
 </code>
 

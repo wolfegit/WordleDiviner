@@ -89,7 +89,7 @@ letters in a complex RegEx (regular expression) against a dictionary file, based
 You may decide to swap out the dictionary file for a simpler word list or some other custom dictionary.  <code>dictionary.json</code> is (of course) in JSON format.  There are many online utilities to convert <code>txt</code> files to <code>json</code>.  Example JSON format:
 
 <code>
-[ ...
+[...
   
   "abandoned",  
   
@@ -100,9 +100,8 @@ You may decide to swap out the dictionary file for a simpler word list or some o
   "abandoning",
   
   "abandonment", 
-
-  ...
-]
+  
+  ...]
 </code>
 
 # Boilderpate Mardown Text

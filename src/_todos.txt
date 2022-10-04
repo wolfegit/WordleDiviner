@@ -2,7 +2,7 @@
 ✅  Add to GitHub
 ✅  Make case-insensitive
 ✅  Add coresponding color to input green, yellow, grey / CSS
-✅  Auto-grow Eesults textarea
+✅  Auto-grow Results textarea
 ✅  Auto-grow Error textarea
     ✅ npm install react-textarea-autosize
 ✅  Improve aesthetics

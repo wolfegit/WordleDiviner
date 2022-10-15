@@ -1,5 +1,20 @@
 # Wordle Diviner
 
+<em>
+This program is free software: you can redistribute it and/or modify it 
+under the terms of the GNU General Public License as published by the 
+Free Software Foundation, either version 3 of the License, or 
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+See the GNU General Public License for more details.
+
+***
+</em>
+
 This browser-based utility helps you divine the answer to Wordle and its many copycats.
 
 GitHub source code:
@@ -48,7 +63,7 @@ and
 
 5. As you type in letters for each color, the results changes dynamically. 
 
-6.  Words ending in "S" - plurals and 3rd person verb conjugations.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
+6.  TIPS: Words ending in "S" - plurals and 3rd person verb conjugations.  The Wordle dictionary does not include these, so avoid them when guessing from the Results list.
 
     - Avoid guessing plural words (e.g. FACES)
 
@@ -60,12 +75,11 @@ and
 
         https://norvig.com/mayzner.html
 
-7. It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose?
+7. TIPS: It's best to choose the "best" word from the list.  Wordle and others use heuristic tables when choosing their answers.  Of these actual results, for example, which would you choose?
 
     There are several good words: of the best are `spice`, `spike`, `spite` and `swipe`.  ***`spice`*** is the correct answer, the most common, obvious word.
 
  ![Screenshot](WordleDivinerBestWords.jpg)
-
 
 Also, avoid vulgar words (i.e. cuss words). Wordle (and others) use heuristics to filter out these words. 
 
@@ -104,6 +118,8 @@ You may decide to swap out the dictionary file for a simpler word list or some o
   ...]
 </code>
 
+
+Since Wordle Diviner is purely a web application, it has a mobile-friendly interface.
 # Boilderpate Mardown Text
 ## Available Scripts
 

@@ -1,4 +1,3 @@
-/*
 This program is free software: you can redistribute it and/or modify it 
 under the terms of the GNU General Public License as published by the 
 Free Software Foundation, either version 3 of the License, or 
@@ -9,17 +8,3 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 
 See the GNU General Public License for more details.
-*/
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App'; // App.js file
-import Keypress from './Keypress'; // App.js file
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App /> {/*  App.js file renders here }*/}
-  </React.StrictMode>
-);

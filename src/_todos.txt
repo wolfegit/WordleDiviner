@@ -22,6 +22,12 @@ See the GNU General Public License for more details.
 
 🔲  TODO    Expand to allow for range of 4 to 11 letter words
 
+🔲  TODO    Remove Errors segment - replace results if there are errors:
+            Green Letters:
+            Yellow Letters:
+            Grey Letters:
+            Results: matching words or error
+
 ⛔  WONTFIX Instead of 5-letter fields for Green and Yellow, have individual 
     1-letter fields so the user doesn't need to fuss with ..... padding.
     🟩 🟩 🟩 🟩 🟩 
